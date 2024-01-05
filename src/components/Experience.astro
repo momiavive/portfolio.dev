@@ -1,0 +1,31 @@
+---
+import type { Code, Debug } from "astro:components";
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "UX/UI Developer - WEDOX Perú",
+    description: "Responsable del desarrollo de Interfaces y Experiencia de Usuario de la plataforma BUPLAT. Implantación de buenas prácticas, legibilidad y optimización de código en base a la documentación del framework en el que está basada la plataforma. Creación de componentes (custom controls) reutilizables y funcionales.",
+    link: "https://buplat.com/",
+  },
+  // {
+  //   date: "Septiembre 2022",
+  //   title: "Principal Frontend Engineer  − Adevinta Spain",
+  //   description:
+  //     "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+  // },
+];
+---
+
+<ol 
+  class="relative border-s border-gray-200 dark:border-gray-700 ml-3"
+>
+  {
+    EXPERIENCE.map(experience => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience}/>
+      </li>
+    ))
+  }
+</ol>
+

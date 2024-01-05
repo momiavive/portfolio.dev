@@ -1,0 +1,58 @@
+---
+import ReactIcon from './icons/React.astro';
+import CssIcon from './icons/Css.astro';
+import JavaScriptIcon from './icons/JavaScript.astro';
+
+const TAGS = {
+  REACT: {
+    name: "React JS",
+    class: "bg-[#00445a] text-white",
+    icon: ReactIcon
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#0d3047] text-white",
+    icon: CssIcon
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-[#c4af00] text-black",
+    icon: JavaScriptIcon
+  }
+};
+
+const PROJECTS = [
+  {
+    title: "React TODO",
+    description: "Primer proyecto básico hecho con React JS que me permitió comprender conceptos como: Elementos y sus atributos, componentes y sus propiedades (props), comunicación entre componentes, prop drilling, css con react, estados, eventos de react, hooks y custom hooks, contextos y portales.",
+    link: "https://momiavive.github.io/react-todo/",
+    github: "https://github.com/momiavive/react-todo",
+    image: "/projects/react-todo.webp",
+    tags: [TAGS.REACT, TAGS.CSS, TAGS.JS]
+  }
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {
+          tags.map(tag => (
+            <li>
+              <span class={`flex items-center gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}>
+                <tag.icon class="size-4" />{tag.name}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+      <img 
+        class="rounded shadow-2xl shadow-white/10"
+        src={image} alt={`Captura de pantalla del proyecto ${image}`} 
+      />
+    </article>
+  ))
+}
