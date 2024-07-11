@@ -23,20 +23,22 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "React TODO",
-    description: "Primer proyecto básico hecho con React JS que me permitió comprender conceptos como: Elementos y sus atributos, componentes y sus propiedades (props), comunicación entre componentes, prop drilling, css con react, estados, eventos de react, hooks y custom hooks, contextos y portales.",
-    link: "https://momiavive.github.io/react-todo/",
-    github: "https://github.com/momiavive/react-todo",
-    image: "/projects/react-todo.webp",
+    title: "React Ecommerce",
+    description: "Primer proyecto avanzado hecho con React JS con características básicas de un ecommerce como carrito de compras, filtrado y paginación de productos, visualizacion de producto a detalle; asi como manejo de rutas y manejo de estados con Context API.",
+    link: "https://benijs-ecommerce.netlify.app/",
+    github: "https://github.com/momiavive/react-ecommerce",
+    image: "/projects/ecommerce.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.JS]
   }
 ];
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image, link }) => (
     <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <a href={link} target="_blank">
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      </a>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-2 flex-row mb-2">
         {
