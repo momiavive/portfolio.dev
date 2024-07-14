@@ -1,13 +1,22 @@
+---
+const year = new Date().getFullYear();
+---
 <footer
     class="bg-white rounded-lg shadow m-4 dark:bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10"
 >
     <div
         class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
     >
-        <span class="text-sm text-gray-500 sm:text-center dark:text-yellow-200/90"
-            >© 2023 <a href="https://www.linkedin.com/in/ffclmauricio/" class="hover:underline" target="_blank"
-                >BeniJ</a
-            >. Todos los derechos reservados.
+        <span
+            class="text-sm text-gray-500 sm:text-center dark:text-yellow-200/90"
+            >© {year}
+            <a
+                href="https://www.linkedin.com/in/ffclmauricio/"
+                class="hover:underline"
+                target="_blank"
+            >
+                BeniJ
+            </a>. Todos los derechos reservados.
         </span>
         <ul
             class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-white/90 sm:mt-0"

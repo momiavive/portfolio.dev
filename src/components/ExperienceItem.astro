@@ -1,13 +1,17 @@
 ---
+import type { TechStack } from '@constants/tags';
+import TechPill from './TechPill.astro';
+
 interface Props {
     title: string;
     summary: string;
     items?: string[];
+    techStack?: TechStack[]
     link?: string;
     date: string;
 }
 
-const { title, summary, items, link, date } = Astro.props;
+const { title, summary, items, techStack, link, date } = Astro.props;
 ---
 
 <div
@@ -36,6 +40,19 @@ const { title, summary, items, link, date } = Astro.props;
         items.map(item => (
           <li class="mb-2 ms-6 list-disc">
             {item}
+          </li>
+        ))
+      }
+    </ul>
+  )
+}
+{
+  techStack && techStack.length > 0 && (
+    <ul class="flex gap-2 flex-row my-4 flex-wrap">
+      {
+        techStack.map(tech => (
+          <li>
+            <TechPill name={tech} />
           </li>
         ))
       }

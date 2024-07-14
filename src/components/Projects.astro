@@ -1,25 +1,5 @@
 ---
-import ReactIcon from './icons/React.astro';
-import CssIcon from './icons/Css.astro';
-import JavaScriptIcon from './icons/JavaScript.astro';
-
-const TAGS = {
-  REACT: {
-    name: "React JS",
-    class: "bg-[#00445a] text-white",
-    icon: ReactIcon
-  },
-  CSS: {
-    name: "CSS",
-    class: "bg-[#0d3047] text-white",
-    icon: CssIcon
-  },
-  JS: {
-    name: "JavaScript",
-    class: "bg-[#c4af00] text-black",
-    icon: JavaScriptIcon
-  }
-};
+import TechPill from '@components/TechPill.astro';
 
 const PROJECTS = [
   {
@@ -28,7 +8,7 @@ const PROJECTS = [
     link: "https://benijs-ecommerce.netlify.app/",
     github: "https://github.com/momiavive/react-ecommerce",
     image: "/projects/ecommerce.png",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.JS]
+    tags: ["REACT", "JS", "TAILWIND"]
   }
 ];
 ---
@@ -44,9 +24,7 @@ const PROJECTS = [
         {
           tags.map(tag => (
             <li>
-              <span class={`flex items-center gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}>
-                <tag.icon class="size-4" />{tag.name}
-              </span>
+              <TechPill name={tag} />
             </li>
           ))
         }

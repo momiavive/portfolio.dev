@@ -1,0 +1,8 @@
+---
+import { TAGS } from '@constants/tags';
+const { name } = Astro.props;
+const TAG = TAGS[name as keyof typeof TAGS];
+---
+<span class={`flex items-center gap-x-2 rounded-full text-md font-semibold ${TAG.class} py-1 px-2`}>
+  <TAG.icon class="size-4" />{TAG.name}
+</span>
