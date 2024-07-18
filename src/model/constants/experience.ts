@@ -25,7 +25,7 @@ export const EXPERIENCE: Experience[] = [
       "Desarrollo de controles personalizados de OPENUI5 para suplir las limitaciones de los controles por defecto, mejorando así la funcionalidad y la flexibilidad de la aplicación.",
       "Refactorización de código legacy, aplicando documentación y buenas prácticas de código en base al framework bajo el cual se encuentra el proyecto."
     ],
-    techStack: ["CSHARP", "DOTNET", "OPENUI5", "REACT", "TAILWIND", "CSS", "JS", "NEXTJS"]
+    techStack: ["CSHARP", "DOTNET", "OPENUI5", "NEXTJS", "REACT", "TAILWIND", "HTML", "CSS", "JS", "JQUERY"]
   },
   {
     date: "Marzo 2020 - Marzo 2023",
@@ -42,7 +42,7 @@ export const EXPERIENCE: Experience[] = [
       "Desarrollo de plataforma web con la finalidad de extender y suplir limitaciones de BizAgi, para el manejo de creación y lectura de reportes personalizados bajo configuraciones y autorizaciones.",
       "Desarrollo de plataforma web para suplir limitaciones de BizAgi relacionadas a la gestión de notificaciones, manejo de plantillas de correo pesonalizados, y conexiones a base de datos para obtener información de los casos de BizAgi."
     ],
-    techStack: ["BIZAGISTUDIO", "CSHARP", "DOTNET", "OPENUI5", "CSS", "JS"]
+    techStack: ["BIZAGISTUDIO", "CSHARP", "DOTNET", "OPENUI5", "HTML", "CSS", "JS", "JQUERY"]
   },
   {
     date: "Junio 2019 - Junio 2024",
@@ -54,6 +54,6 @@ export const EXPERIENCE: Experience[] = [
       "Desarrollo de aplicación web para la gestión de procesos tácticos, centrada en la gestión de actividades operativas diarias, aprobaciones y flujos de trabajo. La solución incluye funcionalidades para la asignación de tareas, seguimiento del progreso, gestión de recursos y generación de informes detallados.",
       "Colaboración estrecha con WEDOX para el logro del producto BUPLAT."
     ],
-    techStack: ["OPENUI5", "JS", "CSS"]
+    techStack: ["OPENUI5", "HTML", "JS", "CSS"]
   }
 ];

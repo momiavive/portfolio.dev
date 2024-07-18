@@ -8,6 +8,8 @@ import DotNet from '@components/icons/DotNet.astro';
 import BizagiStudio from '@components/icons/BizagiStudio.astro';
 import type { TypeOf } from 'astro/zod';
 import NextJS from '@components/icons/NextJS.astro';
+import Html from '@components/icons/Html.astro';
+import JQuery from '@components/icons/JQuery.astro';
 
 export const TAGS = {
   REACT: {
@@ -54,6 +56,16 @@ export const TAGS = {
     name: "Next JS",
     class: "bg-[#323330] text-white",
     icon: NextJS
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#323330] text-[#ef652a]",
+    icon: Html
+  },
+  JQUERY: {
+    name: "jQuery",
+    class: "bg-[#323330] text-[#78CFF5]",
+    icon: JQuery
   }
 };
 
